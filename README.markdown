@@ -21,6 +21,7 @@ Sequence *motor;
 
 void setup()
 {
+	// configure pins 2, 3 and 4 as individual phases
 	motor = motor_initialize(2, 3, 4, SEQUENCE_SIMPLE);
 }
 
@@ -41,7 +42,10 @@ Sequence *motor;
 
 void setup()
 {
+	// configure pins 2, 3 and 4 as individual phases
 	motor = motor_initialize(2, 3, 4, SEQUENCE_SIMPLE);
+
+	// configure speed control
 	motor_set_speed(motor, 1000);
 	motor_set_speed_control(motor, true);
 }
