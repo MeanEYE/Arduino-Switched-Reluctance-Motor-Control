@@ -190,7 +190,7 @@ bool motor_step_backward(Sequence *sequence)
  */
 void motor_apply(Sequence *sequence)
 {
-	if (sequence->running)
+	if (!sequence->running)
 		return;
 
 	digitalWrite(sequence->pin1, sequence->phase1 & sequence->position ? HIGH : LOW);
